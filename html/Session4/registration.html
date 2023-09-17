@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        FirstName: <input type="text" placeholder="First Name"/>
+        <br><br>
+        LastName: <input type="text" placeholder="Last Name"/>
+        <br><br>
+        Email:  <input type="email" placeholder="john.doe@gmail.com"/>
+        <br><br>
+        Gender: 
+        <input type="radio" value="male" name="gender" checked>Male
+        <input type="radio" value="female" name="gender">Female
+        <input type="radio" value="other" name="gender">Other
+        <br><br>
+        Languages Known:
+        <input type="checkbox" value="hindi" checked>Hindi
+        <input type="checkbox" value="eng" checked>English
+        <input type="checkbox" value="marathi">Marathi
+        <input type="checkbox" value="tamil">Tamil
+        <br><br>
+        Country
+        <select> <!--multiple allows you to select multiple options-->
+            <option></option>
+            <option value="india">India</option>
+            <option value="us">US</option>
+            <option value="uk">UK</option>
+            <option value="sgt" selected>Singapor</option>
+        </select>
+        <br><br>
+        Date of Birth: <input type="date">
+        <br><br>
+        Percentage: <input type="number" max="100" min="0" step="5">
+        <br><br>
+        Favourite Color:<input type="color" value="#00FF00"/>
+        <br><br>
+        Upload Profile Picture<input type="file" multiple>
+        <br><br>
+        Range: <input type="range" max="100" min="0" value="50" >
+        <br><br>
+        Phone: <input type="tel" pattern="[0-9]+" required>
+        <br><br>
+        Search: <input type="search">
+        <br><br>
+        Message: <textarea rows="5" cols="25"></textarea>
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
