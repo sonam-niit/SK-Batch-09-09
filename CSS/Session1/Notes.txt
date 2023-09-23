@@ -1,0 +1,50 @@
+CSS: Cascading Style Sheet
+
+Styling Language using that we can style our HTML pages and we can make the look & feel of our HTML page.
+
+we can work with CSS in 3 ways
+
+1. Internal CSS:
+write the CSS inside HTML page
+include using <style> tag
+we can include it anywhere in HTML page like head tag
+body tag
+
+suggested location is add it in <head>tag
+
+2. External CSS:
+
+create a seperate file with the extention .css name can be anything (ex. mystyle.css)
+include the css file to any of your HTML page
+for include use <link> tag
+
+<link> tag attributes
+href= name of the file which you want to link
+rel= "stylesheet" its a mandatory attribute so if you not include this CSS won't work.
+
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+
+type attribute is not mandatory in CSS3 version
+
+3. Inline CSS:
+apply unique CSS to a perticular tag than go for inline CSS.
+
+you can apply it to any tag using style attribute and give the values in combination of key vallue pair.
+
+Inline CSS is having a highest priority
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
