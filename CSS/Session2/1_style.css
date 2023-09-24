@@ -1,0 +1,22 @@
+ /* Group Selector */
+ h1,h2,h3{
+    background-color: gold;
+    color: blue;
+}
+p{
+    font-size: 20px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+}
+img{
+    border-width: 2px;
+    border-color: blue;
+    border-style: solid ;
+}
+table,th,td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    padding: 10px;
+}
