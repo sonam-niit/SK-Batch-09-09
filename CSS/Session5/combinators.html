@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Select All P Childs of Div tag */
+        /* div p{
+            background-color: pink;
+        } */
+        /* Select Only child no grand childs */
+        /* div>p{
+            background-color: pink;
+        } */
+        /* Select Only First Sibling */
+        /* div+p{
+            background-color: pink;
+        } */
+        /* Select All Siblings */
+        div~p{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Child tag of Div tag</p>
+        <p>Child tag of Div tag</p>
+
+        <section>
+            <p>Grand Child of Div tag</p>
+            <p>Grand Child of Div tag</p>
+        </section>
+    </div>
+    <p>Sigling of Div tag</p>
+    <p>Sigling of Div tag</p>
+</body>
+</html>

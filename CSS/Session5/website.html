@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+        }
+        .header{
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1/4;
+            height: 150px;
+            background-color: palegreen;
+        }
+        .sidebar{
+            background-color: palegoldenrod;
+            height: 350px;
+        }
+        .main{
+            background-color: peru;
+            height: 350px;
+        }
+        .right{
+            background-color: palegoldenrod;
+            height: 350px;
+        }
+        .footer{
+            grid-column: 1/4;
+            height: 150px;
+            background-color: palevioletred;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div class="flex-container">
+                <div class="header-left">
+                    <img src="https://images.jdmagicbox.com/comp/pune/k7/020pxx20.xx20.230519124420.z7k7/catalogue/skill-academy-by-testbook-sadashiv-peth-pune-tutorials-z1sonpqwxo.jpg?clr=#14523d"
+                    height="160" />
+                </div>
+                <div class="header-main">
+                    <h1>Skill Academy By TestBook</h1>
+                    <p>Learn Anything Anytime..</p>
+                </div>
+                <div class="header-right">
+                    <h3>Customer Care: 1800 1800 1800</h3>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar"></div>
+        <div class="main"></div>
+        <div class="right"></div>
+        <div class="footer">
+
+        </div>
+    </div>
+
+</body>
+</html>
