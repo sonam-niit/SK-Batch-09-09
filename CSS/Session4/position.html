@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 30%;
+            background-color: palegreen;
+            margin: 5px;
+        }
+        .item1{
+            position: relative;
+            z-index: 3;
+        }
+        .item2{
+            background-color: gold;
+            position: absolute;
+            top:70px;
+            left: 60px;
+            z-index: 2;
+        }
+        .item3{
+            background-color: palevioletred;
+            position: relative;
+            top:20px;
+            left: 40px;
+            z-index: 1;
+        }
+        .item4{
+            position: relative;
+        }
+        .fixed{
+            position: fixed;
+            top: 80px;
+            right: 100px;
+            background-color: grey;
+        }
+        .sticky{
+            position: sticky;
+            top: 10px;
+            right: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="sticky">5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div class="fixed">5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</body>
+</html>
