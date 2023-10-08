@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D transformation</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            background: linear-gradient(blue, yellow);
+            border: 2px solid blue;
+        }
+        div:hover{
+            /* transform: translate(50px,100px); */
+            /* transform: rotate(180deg); */
+            /* transform: scale(1,3); */
+            /* increases x axis multiply by 1 and y axis multiply by 3 */
+            /* transform: scale(0.5,0.5); */
+            /* transform: skewY(20deg); */
+            /* SkewX it skews the element on th basis of X Axis */
+            transform: matrix(1,0,0,1,20,20);
+
+            /* matrix(a,b,c,d,e,f);
+                a:scaleX()
+                b:skewY()
+                c:skewX()
+                d:scaleY();
+                e:translateX();
+                f:translateY()
+            */
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            color: white;
+            background-color: blue;
+            position: relative;
+            animation: shifting 5s infinite;
+            /* animation-delay: 1s; */
+        }
+        .div1{
+            animation-timing-function: linear;
+        }
+        .div2{
+            animation-timing-function: ease;
+        }
+        .div3{
+            animation-timing-function: ease-in;
+        }
+        .div4{
+            animation-timing-function: ease-in-out;
+        }
+        .div5{
+            animation-timing-function: ease-out;
+        }
+        @keyframes shifting{
+            from{left: 0px;}
+            to{left:900px}
+        }
+    </style>
+
+</head>
+<body>
+    <div class="div1">Linear</div>
+    <div class="div2">Ease</div>
+    <div class="div3">ease-in</div>
+    <div class="div4">ease-in-out</div>
+    <div class="div5">ease-out</div>
+</body>
+</html>
