@@ -1,0 +1,193 @@
+Javascript
+------------------------
+
+its scripting language, using that we can create dynamic page where the script is not visible in the browser, but will execute behind the scene and you can just see the output.
+
+Browser load the script and will execute and the show you the output.
+
+What is meaning of Dynamic Content?
+
+Earlier the pages which we have created are the static pages, its just for showing simple content to the user but if user wants to interact with the page and while interacting you want to provide some effect to the user so for that we required JS.
+
+like validation in the form
+
+
+SONAM.FACULY@testbook.com ---> sonam.faculty@testbook.com
+
+      sonam --> sonam
+
+alert, confirmation pop up , propmt 
+
+How to include Javascript to our HTML Page
+------------------------------------------------
+internal JS
+------------------
+<script>
+   //write your code
+</script>
+
+External JS
+--------------------------
+create a seperate js file -- myscript.js
+
+in html
+<script src="myscript.js" ></script>
+
+
+Variables
+------------------------------
+naming conventions
+---------------------------
+
+1.suggested to write variables name in lowercase, if more than one word then 2nd word first letter should be capital
+	name
+	firstName
+	lastName
+	mySimpleIntrest
+
+2. no special characters allowed, space comma semicolon ? + = not allowed
+
+	only _ and $ allowed
+
+	a b -- not valid
+	a-b -- not valid
+	a.b -- not valid
+	a%b -- not valid
+
+	a_b -- valid
+	$name -- valid
+	a$b -- valid
+
+3. name must start with alphabets, you can not start the variables names with digits.
+
+	name -- valid
+	number -- valid
+	number1 -- valid
+	number2 -- valid
+	
+	1number -- not valid
+	2number -- not valid
+
+4. its suggested to give a proper name to a variable rather than giving like a,b,x, y, z as a developres perspective.
+
+Varible we have multiple datatypes
+----------------------------------
+
+few datatypes are called premitive datatypes(in built datatypes)
+
+number
+string
+boolean -- true / false
+null -- nothing considered as object
+undefined - variable declared but not defined with any value.
+
+Non-premitive datatypes called as user defined Datatypes
+------------------------------------------------------------
+Object
+Array: 1D array, 2D array
+
+
+
+
+To declare variables we can use more 2 keywords
+
+let and const
+
+the diffrence is 
+
+let value we can change
+const valued we can't change once its initialized (constant)
+
+Let and const both are having a same scope which is block scope (once the block completed its deleted from the memory which we can't use)
+var is having a functional scope means we can use it till function, outside the functions we can't access)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
