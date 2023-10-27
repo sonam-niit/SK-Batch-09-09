@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operator</title>
+</head>
+<body>
+    <script>
+        //prompt always give values in String so to convert
+        //it into number used Number function 
+        let num1=Number(prompt("Enter Number 1"));
+        let num2=Number(prompt("Enter Number 2"));
+
+        let add= num1+ num2;
+        let sub= num1-num2;
+        let mul= num1*num2;
+        let div= num1/num2;
+
+        //template Literal
+        console.log(`Addition ${num1} + ${num2} = ${add}`);
+        //Addition 10 + 20 = 30
+        console.log(`Subtraction ${num1} - ${num2} = ${sub}`);
+        console.log(`Multiplication ${num1} * ${num2} = ${mul}`);
+        console.log(`Division ${num1} / ${num2} = ${div}`);
+    </script>
+</body>
+</html>

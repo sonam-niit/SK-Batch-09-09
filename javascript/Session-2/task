@@ -1,0 +1,11 @@
+--Write a program to get side value from user and calculate the area of Square
+--Write a program to get base and height and calculate the area of triangle
+--Write a program to get the radius from use and calculate circumference and area of circle
+(2*pi*r) area= pi*r*radius
+
+--Write a program to get 3 subjects marks from user and calculate the average and percentage.
+--Write a program to get principle amount, rate of intrest and number of years and calculate 
+simple intrest (I= p*r*n /100)
+--Write a program to get number from user and check wether is divisible by 5 or not.
+--Write a program to ask user to enter username and password and if the username is admin and
+password is admin123 then alert with Login successfull else alert with Invalid credentials.

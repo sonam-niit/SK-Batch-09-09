@@ -101,6 +101,21 @@ const valued we can't change once its initialized (constant)
 Let and const both are having a same scope which is block scope (once the block completed its deleted from the memory which we can't use)
 var is having a functional scope means we can use it till function, outside the functions we can't access)
 
+Session2:
+------------------------
+Operators
+
+1. Arithmetic Operator
+
+	+, -, * (multiplication), / (division), % (modulo) returns reminder
+
+2. comparison Operator:
+
+	conditions: >, < ,>=, <=, ==, ===, !=, !==
+Real time usage in if condition
+
+
+45 % 10= 5
 
 
 
