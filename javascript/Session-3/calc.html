@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let result;
+        while (true) {
+
+            let num1 = Number(prompt("Enter Number 1"));
+            let num2 = Number(prompt("Enter Number 2"));
+            let op = prompt(`Enter + for Addition - for subtraction * form multiplication
+        and / for divison`)
+
+            switch (op) {
+                case "+": result = num1 + num2;
+                          alert(`Addition ${result}`); break;
+                case "-": result = num1 - num2;
+                          alert(`Subtraction ${result}`); break;
+                case "*": result = num1 * num2;
+                          alert(`Multiplication ${result}`); break;
+                case "/":  result = num1 / num2;
+                          alert(`Division ${result}`); break;
+                default: alert("Enter proper operator")
+            }
+
+            const input = prompt("Enter y to continue and any key to exit")
+            if (input == 'y' || input == 'Y') {
+                continue; //continue loop
+            } else {
+                break; //terminating loop
+            }
+        }
+    </script>
+</body>
+
+</html>
