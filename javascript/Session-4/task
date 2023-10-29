@@ -1,0 +1,5 @@
+1. Write a function to check weather the given number is even or odd.
+2. Write a function to check the user is valid for vote or not.
+3. Write a function which takes one parameter and print the natural number to that limit.
+   mean if i pass 15 then it will print 1-15
+4. Write a function to take 2 paramets as base and height and calculate the area of triangle.

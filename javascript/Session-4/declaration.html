@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        greeting();
+        //function Declaration
+        function greeting(){
+            alert("Greeting function")
+        }
+        //function Expresstion (assign to one variable)
+        let welcome= function(){
+            alert("Welcome Everyone")
+            greeting()
+        }
+        welcome();
+
+        //Normal function we can call before we write it
+        //Declaration function if we try to call before its intialization it will give you an error
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function simpleintrest(principle,roi,noy){
+            return (principle*roi*noy)/100;
+        }
+        function square(n){
+            return n*n;
+        }
+        function cube(n){
+            return n*n*n;
+        }
+        function main(){
+            const option=Number(prompt("Enter 1 for Simple Intrest 2 for Square and 3 for Cube"));
+            switch(option){
+                case 1: 
+                        const p= prompt("Enter Principle Amount");
+                        const r= prompt("Enter Rate of Intest");
+                        const n= prompt("Enter No of Years");
+                        console.log("Simple Inrest: "+ simpleintrest(p,r,n));
+                        break;
+                case 2:
+            }
+        }
+        main()
+    </script>
+</body>
+</html>
