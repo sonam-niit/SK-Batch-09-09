@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        function scoping() {
+
+            if (true) {
+                var a = "apple"; //function scope
+                let b = "banana"; // block Scope
+
+                console.log(`Insilde Block var: ${a}`);
+                console.log(`Insilde Block let: ${b}`);
+            }
+
+            console.log(`Outside Block in Function var: ${a}`);
+            //console.log(`Outside Block in function let: ${b}`); //Error
+        }
+        scoping();
+        console.log(`Outside the Function Var: ${a}`); //error
+    </script>
+</body>
+
+</html>
