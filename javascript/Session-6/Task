@@ -1,0 +1,16 @@
+1. Create an object which represent a book with properties like title, author and pages.
+   Write a function that takes a book object as parameter and print the books information in 
+   browser.
+
+    const book={
+
+    }
+    const print: function(para){
+        //printing login
+    }
+
+    print(book)
+
+2. Create an object represent weather object with properties temprature, condition and location
+    Write a function which print information about the weather based on condition.
+    //apply your logics to provide info... 

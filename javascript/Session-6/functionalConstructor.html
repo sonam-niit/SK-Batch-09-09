@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(id,name,email){
+            this.id=id;
+            this.name=name;
+            this.email=email;
+        }
+        Employee.prototype.display =function(){
+            console.log(`Id: ${this.id}`);
+            console.log(`Name: ${this.name}`);
+            console.log(`Email: ${this.email}`);
+        }
+
+        //let's create multiple objects
+        let e1= new Employee('E001','Sandeep','sandip@gmail.com');
+        let e2= new Employee('E002','Satya','satya@gmail.com');
+
+        console.log(e1,e2);
+        e1.display();
+        e2.display();
+    </script>
+</body>
+</html>

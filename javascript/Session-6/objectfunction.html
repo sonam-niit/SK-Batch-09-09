@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //simple objects
+         const person={
+            name:'sonam soni',
+            age:37,
+            city:'mumbai',
+            email:'sonam@gmail.com',
+            //functions
+            greet:function(marks){
+                console.log(`Welcome: ${this.name}`);
+                console.log(`Marks: ${marks}`);
+            },
+            display:function(){
+                console.log(`Name: ${this.name}`);
+                console.log(`Email: ${this.email}`);
+                console.log(`Age: ${this.age}`);
+            }
+        }
+        //call methods
+        person.greet(90);
+        person.display();
+    </script>
+</body>
+</html>

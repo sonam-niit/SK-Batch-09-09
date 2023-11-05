@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user={
+            name:'sonam',
+            email:'sonam@gmail.com',
+            country:'india',
+            address:{
+                street:'XYZ street',
+                city:'Mumbai',
+                state:'Maharastra',
+                pincode:535621
+            },
+            department:{
+                name:'sales',
+                shift:'morning',
+                timings:{
+                    entry:'6:30AM',
+                    exit:'2:30PM'
+                }
+            }
+        }
+        console.log(user);
+        console.log(user.address.city);
+        //console.log(user.department.shift+' Timings: '+user.department.timings)
+
+        //Desctructring
+        const {address:{city},department:{shift,timings:{entry,exit}}}=user;
+        console.log(city,shift,entry,exit);
+        //user.department.timings.entry
+
+    </script>
+</body>
+</html>

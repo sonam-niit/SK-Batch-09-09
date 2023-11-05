@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const object = {
+            name: 'Pencil',
+            price: 100,
+            description: 'Easy to Use,Extra Dark',
+            rating: 4.8
+        }
+        //I want to declare the variables
+        //const name= object.name;
+        //const price= object.price;
+        //Above code is little complex and lengthy
+        const {name,price,description,rating}= object;
+        console.log(name,price,description,rating);
+
+        const{description:desc}=object;
+        console.log(desc);
+
+    </script>
+</body>
+
+</html>
