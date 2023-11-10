@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array=[]; //empty array
+
+        array.push(10); // add at 0 index because array is empty
+        array.push(20); //add it add 1'st index
+        console.log(array);
+        //push method alway add element at the end of the array
+        //to add at the first index.
+        array.unshift(30);
+        array.unshift(40);
+        console.log(array);
+
+        //remove element from the last index.
+        console.log('Removed: '+ array.pop());
+        console.log(array);
+        //remove element from the first(0) index.
+        console.log('Removed: '+ array.shift());
+        console.log(array);
+        //insert in between
+        array.splice(1,0,40,50,60);
+        //parameter 1: from which index to start for insertion
+        //parameter 2: howmany elements you want to delete
+        //parameter 3,4,5.... : number which you want to inject
+        console.log(array);
+        //replace 40 adn 50 by 90
+        array.splice(1,2,90);
+        console.log(array);
+        //delete 60
+        array.splice(2,1);
+        console.log(array);
+
+        const newArray=[1,2,3,4,5,6,7,8,9,10].slice(3,8);
+        console.log(newArray);
+        //slice to make a new partition from the original array.
+    </script>
+</body>
+</html>

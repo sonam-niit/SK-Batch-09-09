@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array=[35,78,67,89,23,90];//students marks
+
+        console.log(
+            array.every(function(value){
+                return value>=35;
+            })
+        );
+        //every function is checking all the elememnts must satisfy the condition
+        //if all satisfying then return true else return false
+
+        //I want to check if any one is satisfying the condition or not
+        //use some function
+        console.log(
+            array.some(function(value){
+                return value>=90;
+            })
+        );
+
+    </script>
+</body>
+</html>

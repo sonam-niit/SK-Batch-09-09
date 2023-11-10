@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //search a perticular number we have find method
+        //which will return only 1 number if found otherwise send undefined.
+
+        function search(array,num) {
+            const found = array.find(function (value) {
+                return value == num;
+            })
+            if(found!=undefined){
+                console.log(`Found: ${found}`);
+            }else{
+                console.log('Not found');
+            }
+        }
+
+        // search([10,20,30,40,50,60], 80);
+        // search(['apple','ball','cat','dog','elephant'], 'ball');
+
+        //check the element is available at which Index
+        function searchIndex(array,num) {
+            const found = array.findIndex(function (value) {
+                return value == num;
+            })
+            //if found then return perticular index number 
+            //if not found then return -1
+            if(found>=0){
+                console.log(`Found: ${found}`);
+            }else{
+                console.log('Not found');
+            }
+        }
+        searchIndex([10,20,30,40,50,60], 80);
+        searchIndex(['apple','ball','cat','dog','elephant'], 'dog');
+
+    </script>
+</body>
+
+</html>

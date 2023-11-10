@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array=[1,2,3,4,5,6,7,8,9,10];
+        //based on this array I want to create new array
+        const newArray= array.map(function(value){
+            return value*3;
+        })
+        console.log(newArray);
+
+        //print all array elements one by one
+        array.forEach(function(value,index){
+            console.log(`Index: ${index}: Value: ${value}`);
+        })
+        //to filter the array as per the condition and create new array
+        //use filter method
+        const filteredArray=array.filter(function(value){
+            return value%2==0;
+        })
+        console.log(filteredArray);
+
+        
+
+    </script>
+</body>
+</html>
