@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array of names
+        const names=['Alice','Bob','Charlie','David','Eve','Frank'];
+
+        //create a new array with only those whose name is 5 and more character long
+        const newArray= names.filter(function(item){ return item.length>=5});
+        console.log(names);
+        console.log(newArray);
+
+        const array=[2,8,7,3,13,57,90,23];
+        //find the count with odd numbers
+        console.log(`Original length: ${array.length}`);
+        console.log(array.filter(function(item){return item%2!==0}).length);
+
+        //expanded above code
+        const filteredOdd= array.filter(function(item){
+            return item%2!==0;
+        })
+        const count= filteredOdd.length;
+        console.log(count);
+    </script>
+</body>
+</html>

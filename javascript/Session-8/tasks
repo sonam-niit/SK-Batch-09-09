@@ -1,0 +1,24 @@
+1. Filtering:
+   create an array of numbers, and filter only even numbers 
+   create function which accepts array as parameter and return the filtered array.
+
+   function filterArray(numbers){
+        
+        return something
+   }
+
+   //calling
+   filterArray([1,2,3,4,5,6,7,8,9]); //result [2,4,6,8]
+
+2. Mapping (create in the form of function)
+
+    create an array of price list and create one more array which will apply 10%
+    discount on all prices and form a new array.
+
+3. Reducing:
+   Create on array of ages and find the average of all ages using reduce method.
+
+4. Combining
+   Create an array of words and create new array from the same with only those words 
+   whose length is more than 5 and also convert it into CAPITAL (upperCase)
+   Hint: filter method, toUpperCase() method
