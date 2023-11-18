@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Javascript Object
+        const student={
+            id:1,
+            name:"sonam",
+            email:"sonam@gmail.com",
+            dob:Date.now(), //give today's date
+            address:{state:"Maharastra",city:"Mumbai",pincode:401345},
+            phone:['9876543210','7654321890']
+        }
+        console.log(student);
+        console.log(student.id);
+        console.log(student.name);
+        console.log(student.email);
+        console.log(student.dob);
+        console.log(student.address.city,student.address.state,student.address.pincode);
+        console.log(student.phone[0],student.phone[1]);
+        //convert into JSON object
+        const studentJSON=JSON.stringify(student);
+        console.log(studentJSON);
+        //convert the JSON object into JS object
+        console.log(JSON.parse(studentJSON));
+    </script>
+</body>
+</html>

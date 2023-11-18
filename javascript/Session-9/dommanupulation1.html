@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1"></h1>
+    <h2 id="heading2"></h2>
+    <button onclick="show()">Click Me</button>
+    <script>
+        function show(){
+            const h1= document.getElementById('heading1');
+            h1.innerHTML="Skill Academy";
+            document.getElementById('heading2').innerHTML="Learn as much as you can";
+
+            h1.style.color="red"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h1 id="test"></h1>
+    <h1 class="myclass"></h1>
+    <h2></h2><h2></h2><h2></h2>
+    <script>
+        document.querySelector('h1').innerHTML="Skill Academy";
+        //match only first match
+        document.querySelector('#test').innerHTML="My Skill Academy";
+        //match with Id
+        document.querySelector('.myclass').innerHTML="My Class Skill Academy"
+        const elements= document.querySelectorAll('h2');
+        console.log(elements);
+        //give you all matches in form of Array
+        for(let ele of elements){
+            ele.innerHTML="Another H2 tag Demo"
+        }
+    </script>
+</body>
+</html>
