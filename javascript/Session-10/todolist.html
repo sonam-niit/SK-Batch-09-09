@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Todo List Application</h2>
+    <input type="text" id="task" placeholder="Enter Your Task"/>
+    <br><br>
+    <button onclick="addTodo()">Add Task</button>
+    <h3>Task List</h3>
+    <ul id="tasks"></ul>
+    <script>
+        let todos=[];
+
+        function addTodo(){
+            const task = document.getElementById('task').value;
+            if(task!=''){
+                todos.push({id:Date.now(),task});
+                display();
+                document.getElementById('task').value='' //Empty String
+            }else{
+                alert("Task can not be Empty")
+            }
+        }
+        function display(){
+            let data='';
+            for(let t of todos){
+                data+=`<li>${t.id} ${t.task} <button onclick="removeTodo('${t.id}')" >X</button></li>`
+            }
+            document.getElementById('tasks').innerHTML=data;
+        }
+        function removeTodo(t){
+            console.log(t);
+            const index= todos.findIndex(function (item) {return item.id===t});
+            todos.splice(index,1);
+            display();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">00:00</button>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="clearData()">Clear</button>
+    <script>
+        let interval=null;
+        let count=0;
+        const btn= document.getElementById('btn');
+        function start(){
+            interval=setInterval(function(){
+                count++;
+                if(count<60){
+                    btn.textContent='00:'+((count<10)?'0'+count:count);
+                }else{
+                    let min= Math.floor(count/60);
+                    let sec= count- (60*min);
+                    btn.textContent=(min>9?min:'0'+min)+":"+(sec>9?sec:'0'+sec);
+                }
+                
+            },1000)
+        }
+        function stop(){
+            if(interval!=null){
+                clearInterval(interval);
+                alert(btn.textContent+" Time taken..");
+            }else{
+                alert("First start your Timer..!")
+            }
+        }
+        function clearData(){
+            btn.textContent='00:00';
+            interval=null
+        }
+    </script>
+</body>
+</html>

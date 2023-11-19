@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="num"></h1>
+    <script>
+        setTimeout(function(){
+            console.log("This is my Delayed function");
+        },2000)
+        //will execute only once after 2 seconds delay
+        let count=0;
+        const number=setInterval(() => {
+            document.getElementById('num').innerHTML=count;
+            count++;
+            if(count>20){
+                clearInterval(number)
+            }
+        }, 1000);
+        //execute continusly after 1 sec delay
+    </script>
+</body>
+</html>

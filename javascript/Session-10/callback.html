@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //passing function as parameter called callback
+        //to handle the async functionality of Javascript
+        function f1(){
+            console.log("F1 completed");
+        }
+        function f2(){
+            console.log("F2 completed");
+        }
+        function f3(){
+            //its taking 2 seconds time
+            setTimeout(print,2000);
+            //setTimeout first parameter is function and 2nd parameter is time limit(milliseconds)
+            //it will wait for 2 seconds and then call print function
+            //when you pass function as parameter then its considered as callback
+        }
+        function f4(){
+            console.log("F4 completed");
+        }
+        function print(){
+            console.log("F3 completed");
+        }
+
+        f1();
+        f2();
+        f3();
+        f4();
+    </script>
+</body>
+</html>

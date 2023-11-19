@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data=[];
+
+        function fetchData(callback){
+            //assume the data we are fetching from server and it is taking 3 seconds delay
+            setTimeout(function(){
+                data=[1,2,3,4,5,6,7,8,9,10];
+                console.log("Data fetched successfully");
+                callback();//indirecty here I am caling display function
+            },3000)
+        }
+        function display(){
+            console.log('MyData: '+data);
+        }
+        fetchData(display);
+        //pass display function as callback
+        
+    </script>
+</body>
+</html>

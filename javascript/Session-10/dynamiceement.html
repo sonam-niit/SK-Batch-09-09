@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        
+    </div>
+    <button onclick="addPara()">Add New Paragraph</button>
+    <button onclick="removePara()">Remove First Paragraph</button>
+    <script>
+        function addPara(){
+            const para= document.createElement('p');
+            para.textContent="Hello Everyone..!!";
+
+            document.getElementById('div').appendChild(para);
+        }
+        function removePara(){
+            const para= document.querySelector('div p');
+            document.getElementById('div').removeChild(para);
+        }
+    </script>
+</body>
+</html>
