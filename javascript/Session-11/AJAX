@@ -1,0 +1,19 @@
+AJAX: Asynchronous Javascript XML
+
+if you want to create Asynchronous Web Application then we can use AJAX.
+AJAX enables to exchange data between client (browser) and server.
+
+AJAX fetch data from server and display it on client side without interfearing the 
+original behavior of your page. It will not load the full page, it will just load only the changes made.
+
+Asynchronos: it is not synchrnous, one task is not waiting for the another,
+             it doen'ts block any process.
+
+Javascript: AJAX totally dependent on JS, Javascript used to manupulate DOM and print the 
+            data get by AJAX
+
+XMLHTTPRequest: allows you to send the HTTP request to server and received data in return way. XML basically says sending request to server
+
+API (application program Interface)/ Restful API (server calls and to do that calls we can use XMLHttpRequest)
+
+Async functionality we can handle either using callback or another option that is promise.

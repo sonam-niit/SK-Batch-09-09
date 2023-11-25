@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Demo</title>
+</head>
+
+<body>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        //when the response received it will call this function
+        xhr.onreadystatechange = function () {
+
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    data = xhr.responseText;
+                    console.log(data);
+                } else {
+                    console.log(`Error: ${xhr.status}`);
+                }
+            }
+        };
+        //server call
+        xhr.open('GET', 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+        xhr.send();
+
+    </script>
+</body>
+
+</html>
