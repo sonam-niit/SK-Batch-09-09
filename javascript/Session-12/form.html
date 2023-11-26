@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="FirstName" id="fname">
+        <br><br>
+        <span id="errorfname"></span><br>
+        <input type="text" placeholder="LastName" id="lname">
+        <br><br>
+        <span id="errorlname"></span>
+        <br><br>
+        <button type="button" onclick="validate()">Register</button>
+    </form>
+    <script>
+        function validate(){
+            const pattern= /[A-Za-z]+/;
+
+            const fname= document.getElementById('fname').value;
+            const lname= document.getElementById('lname').value;
+            console.log(pattern.test('Sonam123'));
+            if(!pattern.test(fname)){
+                document.getElementById('errorfname').innerHTML="FirstName can only consist Alphabets"
+            }
+            if(!pattern.test(lname)){
+                document.getElementById('errorlname').innerHTML="Last Name can only consist Alphabets"
+            }
+        }
+    </script>
+</body>
+</html>

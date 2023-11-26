@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <h5 id="date"></h5>
+    <img id="image">
+    <script>
+        async function fetchData() {
+            try {
+                const resp = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY');
+                const json = await resp.json();
+                console.log(json);
+                // document.getElementById('title').innerHTML = json.title;
+                // document.getElementById('description').innerHTML = json.explanation;
+                // document.getElementById('image').setAttribute('src', json.url);
+            }catch(error){
+                console.log(error);
+            }
+        }
+        fetchData();
+    </script>
+</body>
+
+</html>

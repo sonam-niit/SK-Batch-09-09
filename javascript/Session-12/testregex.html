@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter First Name" id="fname">
+    <span id="errorFname"></span>
+    <input type="text" placeholder="Enter Phone" id="phone">
+    <span id="errorPhone"></span>
+    <button onclick="validate()">Save</button>
+    <script>
+        function validate(){
+            let pattern= new RegExp("[987]{3}[0-9]{3}[0-9]{4}");
+            let pattern1= new RegExp("[A-Za-z]+");
+            let data= document.getElementById("phone").value;
+            let data1= document.getElementById("fname").value;
+
+            if(!pattern1.test(data1)){
+                document.getElementById("errorFname").innerHTML="Name can have only Alphabets"
+                document.getElementById("errorFname").style.color="red";
+            }else{
+                document.getElementById("errorFname").innerHTML=""
+            }
+
+            if(!pattern.test(data)){
+                document.getElementById("errorPhone").innerHTML="Phone is not valid"
+                document.getElementById("errorPhone").style.color="red";
+            }else{
+                document.getElementById("errorPhone").innerHTML=""
+            }
+        }
+        //+ means more than 1
+        //? means zero or more than zero
+        //[A-Z] contains all letters from A-Z
+        //[a-z] contains all letters from a-z
+        //[0-9] means all digits
+        //\d also contains digits
+
+        // console.log(pattern.test("987-123-4560"));
+        // console.log(pattern.test("798-652-3123"));
+        // console.log(pattern.test("123-123-4560"));
+        // console.log(pattern.test("023-123-4560"));
+    </script>
+</body>
+</html>

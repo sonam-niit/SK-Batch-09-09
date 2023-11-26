@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise= new Promise(function(resolve,reject){
+
+            if(34>23){
+                resolve("Success")
+            }else{
+                reject("Error")
+            }
+        })
+
+        async function check(){
+            try {
+                const resp=await myPromise;
+                console.log(resp);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        check();
+
+        // myPromise.then(function(resp){
+        //     return "Resolved "+resp; //resolved then then part wil execute
+        // }).then(function(result){
+        //     console.log(result);
+        // }).catch(function(err){
+        //     console.log(err);//rejected then catch part will execute.
+        // })
+
+
+
+    </script>
+</body>
+</html>
