@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <input type="text" id="name" placeholder="Enter Name" onblur="uppercase()"/>
+    <br><br>
+    <input type="text" id="username" placeholder="Enter UserName" onblur="uname()"/>
+    <br><br>
+
+    <script>
+        function uppercase(){
+            const name= document.querySelector('#name');
+            name.value= name.value.toUpperCase();
+        }
+        function uname(){
+            const name= document.querySelector('#username');
+            name.value= `@ ${name.value.toLowerCase()}`;
+        }
+    </script>
+</body>
+</html>

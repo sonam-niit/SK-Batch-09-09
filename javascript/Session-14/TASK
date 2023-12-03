@@ -1,0 +1,24 @@
+1. WAP to reverce a string.
+   sonam --> manos
+
+2. check weather the string is palindrome or not?
+
+    means string: malayalam
+          revString: malayalam
+
+          if both are same then its palindrom otherwise its not.
+
+3. Take a sentence: johhny johhny yes papa....
+
+    convert each word first Letter in Capital
+
+    output: Johhny Johhny Yes Papa....
+
+4. Take one word and check howmany Letter are there with its repeatation calculation
+    malayalam
+    -- m: 2
+    -- a: 4
+    -- l: 2
+    -- y: 1
+    
+       Hint: Loop Required
