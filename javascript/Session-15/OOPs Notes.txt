@@ -1,0 +1,23 @@
+Class is having constructor: When we create object constructor will initialize object properties.
+
+Class can also have multiple functions, when we create object each object can have access to that function.
+
+
+Class we can re use  in the concept of inheritance
+
+	class X extends Y 
+		(Y is Parent and X is child)
+
+	Child can access all parents functionality + properties
+
+if child class is also having a constructor and you want pass a values from child to parent constructor we required super keyword.
+
+If Child class is also having same method as parent have then child will use its own method and it will override its parents method this concept is called method overriding.
+	
+	if child wants to parent method as well then you can call it using super keyword.
+
+	similar will word with variable as well.
+
+
+
+
