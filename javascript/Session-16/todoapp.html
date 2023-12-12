@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="todo" placeholder="Enter your Todo">
+    <button onclick="add()">Add Todo</button>
+    <h1>Todos List</h1>
+    <ul id="todos"></ul>
+    <script src="script.js"></script> <!--Included external script first-->
+    <script>
+        const myTodo= new Todo();//Object of Todo Class
+        
+        function add(){
+            const task= document.getElementById('todo');
+            myTodo.addTodo(task.value);
+            //alert('Task Added successfully');
+            task.value='';
+            display();
+        }
+        function display(){
+            const todos= myTodo.getAllTodos();
+            //console.log(todos);
+            let data='';
+            for(let t of todos){
+                data+=`<li>${t.name} <button onclick='removeData(${t.id})'>X</button></li>`;
+            }
+            document.getElementById('todos').innerHTML=data;
+        }
+        function removeData(id){
+            myTodo.removeTodo(id);
+            display();
+        }
+    </script>
+</body>
+</html>
