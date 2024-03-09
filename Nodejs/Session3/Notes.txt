@@ -1,0 +1,116 @@
+Create Package.json file
+>npm init -y
+
+let's install some dependencies
+>npm i express --save (--save flag we are using earlier to work with old node with latest node it doesn't reqired for package installtion locally)
+
+>npm i mysql
+
+You can see the package.json file is updated with 2 depndencies lik the list of dependencies in jso file.
+
+you can also see 1 lock file and folder generated inside your project folder.
+
+why lock file: lock file locks the exact location from where the dependency downloaded mean if you want to redownload you can download the exact packages again.
+
+If you want to share your files to someone or want to upload it on github you should ignore node_modules folder because its getting generated again when it is required.
+
+Just download the project move to that project folder and execute
+npm install command and node_module folder cretaed again.
+
+-- If you want download some packages for development purpose only its not required in production environment
+so those packages you can download only for development environment. How? use --save-dev flag
+
+>npm i jasmine --save-dev (if you check package.json, jasmine is coming unde dev dependencies)
+
+Modules
+-----------------------
+we can also call it as packages/ library, it can be a simple module or some complex module how you written for your projects.
+
+We have 3 types of Module
+
+1. In built Module
+--------------------
+which comes when you install node JS.
+you can directly use them.
+
+eg. fs, http, os, util, url, path
+
+2. Local Module
+------------------
+User Defined Modules
+which we can create and use it to our other files other project and you can also publish your module to npmjs.com to provide
+to your community.
+
+3. third party module
+---------------------------
+we can directly download from npmjs.com repository and use them
+install by executing npm install commad
+
+express, mysql, nodemon, mongodb, mongoose
+
+Let's Create Local Module and USe It
+------------------------------------------
+
+Let's create one file calculator.js 
+and use it by importing using require
+
+When we are creating a simple file and genering package.json then bydefault its type property is commonjs
+mean if you want to export a file use module.exports and to use it use require.
+
+Now If you want to use the latest one ES6 import export logic then follow the below instructions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
