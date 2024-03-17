@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Alex",
+      "email": "alex@gmail.com",
+      "country": "US"
+    },
+    {
+      "id": "3",
+      "name": "Sonam Soni",
+      "email": "sonam.soni@gmail.com",
+      "country": "Mumbai, India"
+    }
+  ]
+}
