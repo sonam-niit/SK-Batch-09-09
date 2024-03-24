@@ -1,0 +1,114 @@
+Open MongoDB Compass and then click on connect.
+Once you are connected you can open mongosh (mongoshell for query execution)
+
+By Default that is test means the DB name is test and whatever the queries you will perform will execute in test DB.
+
+Let's create new DB:
+>use skillacademy
+
+Let's create collection.
+>db.student.insertOne({name:'alex',email:'alex@gmail.com',country:'us'})
+
+It will create new collection named student and insert one record as given and also create unique Id with name _id for that given object.
+
+For retrival of all objects
+
+>db.student.find();
+
+Insert more than one Records
+
+>db.student.insertMany([
+	{name:'bob',email:'bob@gmail.com',country:'uk'},
+	{name:'catty',email:'cat@gmail.com',country:'us'},
+	{name:'devid',email:'devid@gmail.com',country:'australia'},
+	{name:'sonam',email:'sonam@gmail.com',country:'sonam'},
+])
+
+What If i want to fetch data based on name or country?
+
+> db.student.find({name:'devid'})
+
+> db.student.find({country:'us'})
+
+> db.student.findOne({country:'us'})
+
+(fetch only one with first Match)
+
+>db.student.updateOne({name:'sonam'},{$set:{age:34}})
+
+>db.student.updateMany({country:'us'},{$set:{age:43}})
+
+(update many Records based on condition)
+
+>db.student.find().count() -- give you the No of counts in Collection
+
+Apply the limit while data retrival
+
+db.student.find().limit(3);
+
+
+db.student.find().skip(3); (skip first 3 records)
+
+db.student.find().skip(1).limit(1);
+(skip one fetch 1)
+
+Let's sort data
+
+db.student.find().sort({name:1}); //ascending
+db.student.find().sort({name:-1}); //descending
+
+Less than and greater Than
+-------------------------------
+db.student.find({age:{$gte:30}}) //gte greater than or equal to
+
+db.student.find({age:{$lte:30}}) //lte less than or equal to
+
+//ne for not equal and eq equal
+db.student.find({age:{$ne:43}})
+
+db.student.find({age:{$eq:43}})
+
+to fetch only limited fields
+
+db.student.find({},{name:1,email:1))
+//this above query will fetch all data with name and email but by default it will include _id as well
+
+//purposely if you want to skil Id also from fetch then using below query
+
+db.student.find({},{name:1,email:1,_id:0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
