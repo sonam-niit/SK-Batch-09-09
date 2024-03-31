@@ -1,0 +1,89 @@
+Projection Data in Colletction
+-----------------------------------------
+db.student.find({},{email:1,_id:0})
+
+(will fetch only email id from all documents)
+
+Combining conditioons using and and or operator
+
+find all users whose age is greater than 40 and country is US
+---------------------------------------------------------------
+db.student.find({$and:[{age:{$gt:40}},{country:'us'}]})
+
+fetch all who are either from uk and whose age is also more that 40
+------------------------------------------------------------------------
+db.student.find({$or:[{age:{$gt:40}},{country:'uk'}]})
+
+What if I want to find users who live either in india or us.
+db.student.find({$or:[{country:'India'},{country:'us'}]})
+
+the same query we can also solve using in operator
+db.student.find({country: {$in:['india','us']}})
+
+
+Delete One Record
+------------------------------
+db.student.deleteOne({name:'bob'})
+
+Delete Many Records
+-----------------------------
+db.student.deleteMany({country:'us'})
+
+==========================================================================
+Insert some more records for Doing aggregation
+
+db.student.insertMany([
+	{name:'bob',email:'bob@gmail.com',country:'uk'},
+	{name:'john',email:'john@gmail.com',country:'india'},
+	{name:'devid',email:'devid@gmail.com',country:'australia'},
+	{name:'sonam',email:'sonam@gmail.com',country:'india'},
+])
+
+
+Lets understand aggregate functions
+---------------------------------------------
+db.student.aggregate([
+  {$match:{country:'india'}}
+])
+
+find the data based on matches
+
+Grouping
+-------------------
+db.student.aggregate([
+  {$group:
+	{
+		_id:"$country",
+		totalNoUser:{$sum:1}
+	}
+}])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
