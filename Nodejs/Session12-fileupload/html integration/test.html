@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="data"></div>
+    <script>
+        async function fetchProducts() {
+            try {
+                const resp = await fetch('http://localhost:5000/api/product');
+                const json = await resp.json();
+                console.log(json);
+                let html = '';
+                for (let p of json.products) {
+                    html += `<h1>Name: ${p.name}</h2><h2>
+                          <h3>Price: ${p.price}</h3>
+                          <p>Description: ${p.description}</p>
+                          <img src='http://localhost:5000/uploads/${p.image}' alt='${p.name}'
+                          height='200' width='200'/>
+                        `
+                }
+                document.querySelector('#data').innerHTML = html;
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchProducts();
+    </script>
+</body>
+
+</html>
