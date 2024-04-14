@@ -1,6 +1,7 @@
 const express= require('express');
 const mongoose= require('mongoose');
 require('dotenv').config();
+const cookieparser= require('cookie-parser');
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=>console.log('Connected'))
@@ -8,9 +9,11 @@ mongoose.connect(process.env.MONGO_URI)
 
 const app= express();
 app.use(express.json());
+app.use(cookieparser());//parse cookie
 
 app.use('/api/auth',require('./routes/auth.route'));
-// app.use('/api/user',require('./routes/user.route'));
+app.use('/api/user',require('./routes/user.route'));
+app.use('/api/product',require('./routes/product.route'));
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server is listening to the PORT: ${process.env.PORT}`);
