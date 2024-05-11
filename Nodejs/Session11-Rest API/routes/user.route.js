@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const usermodel = require('../models/user.model');
 
-router.post('/',async (req, res) => {
+router.post('/register',async (req, res) => {
     try {
         const { name, email, username, password } = req.body; //object destructure
         if(!name || !email || !username || !password){
