@@ -34,7 +34,7 @@ const login = async (req, res) => {
         if (!user) {
             return res.status(400).send({ message: 'EmailId is not registered with US' });
         }
-        const match = bcrypt.compare(password, user.password);
+        const match =await bcrypt.compare(password, user.password);
         if (match) {
             const payload = { id: user._id, name: user.name, email: user.email }
             //create token
@@ -43,7 +43,7 @@ const login = async (req, res) => {
             res.status(200).send({ message: 'User Logged In', user:payload })
             //return res.status(201).send({ message: 'User Logged In', token, user:payload });
         } else {
-            return res.status(201).send({ message: 'Invalid Credentials' });
+            return res.status(400).send({ message: 'Invalid Credentials' });
         }
 
     } catch (error) {
