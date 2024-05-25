@@ -10,12 +10,15 @@ mongoose.connect(process.env.MONGO_URI)
 
 const app= express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: 'http://localhost:5173' //client host
+  }));
 app.use(cookieparser());//parse cookie
 
-app.use('/api/auth',require('./routes/auth.route'));
-app.use('/api/user',require('./routes/user.route'));
-app.use('/api/product',require('./routes/product.route'));
+app.use('/auth',require('./routes/auth.route'));
+app.use('/user',require('./routes/user.route'));
+app.use('/product',require('./routes/product.route'));
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server is listening to the PORT: ${process.env.PORT}`);

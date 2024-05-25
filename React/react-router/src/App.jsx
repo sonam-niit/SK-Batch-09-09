@@ -10,6 +10,7 @@ import { Container } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import Dashboard from "./components/dashboard";
 import { useState } from "react";
+import Profile from "./components/Profile";
 
 function App() {
   const [login,setLogin]=useState(null);
@@ -27,6 +28,8 @@ function App() {
           <Route path="/top5" element={<Top5Sales />} />
           <Route path="/revenue" element={<Revenue />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Container>
       <ToastContainer />

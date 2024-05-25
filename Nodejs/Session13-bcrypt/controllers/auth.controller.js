@@ -39,7 +39,11 @@ const login = async (req, res) => {
             const payload = { id: user._id, name: user.name, email: user.email }
             //create token
             const token = jwt.sign(payload, process.env.JWT_SECRET)
-            res.cookie('token',token);//added token in cookies
+            res.cookie('token',token,{
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                maxAge: 3600000 // 1 hour
+            });//added token in cookies
             res.status(200).send({ message: 'User Logged In', user:payload })
             //return res.status(201).send({ message: 'User Logged In', token, user:payload });
         } else {

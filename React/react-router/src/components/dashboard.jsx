@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from '../api';
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Dashboard({setSelected}) {
     const [users,setUsers]= useState([]);
@@ -62,6 +63,7 @@ function Dashboard({setSelected}) {
                     }
                 </tbody>
             </table>
+            <Link to='/profile'>Profile Page</Link>
         </div>
      );
 }
