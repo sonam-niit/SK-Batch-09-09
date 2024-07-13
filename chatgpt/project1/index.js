@@ -4,8 +4,10 @@ const authRoutes = require('./routes/auth.route');
 require('dotenv').config();
 const categoryRoutes = require('./routes/category.route');
 const productRoutes = require('./routes/product.route');
+const cors= require('cors');
 
 const app = express();
+app.use(cors());
 
 // Connect Database
 connectDB();
